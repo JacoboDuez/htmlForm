@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+<form id="form">
+    <select id="year">
+        <option>Freshman</option>
+        <option>Sophmore</option>
+        <option>Junior</option>
+        <option>Senior</option>
+    </select>
+    <div>Name</div>
+        <input type="text" id="name" placeholder="Enter your name!">
+    <div>Email</div>
+        <input type="text" id="email" placeholder="enter your email!">
+    <div>Password</div>
+        <input type="text" id="password" placeholder="enter your password">
+    <div>
+        <input type="checkbox" id="checkbox">
+    </div>
+    <button id="myButton"  onclick="handle(event)">Submit</button>
+</form>
+    <script>
+        function handle(e){
+            console.log(e.target.form.elements);
+            console.log(e.target.form.elements.year.value);
+            console.log(e.target.form.elements.checkbox.checked)
+            event.preventDefault();
+        }
+    </script>
+    <style>
+        :root{
+            --border-deactivated:#00B050;
+            --border-hover-effect:#203764;
+        }
+        #name,#email,#password{
+            border-radius: 5px;
+            color: blue;
+            border-color: var(--border-deactivated);
+        }
+        #year:hover{
+            border-radius: 5px;
+            color:blue;
+            background-color: var(--border-hover-effect);
+        }
+        #myButton:hover{
+            background-color:var(--border-hover-effect);
+            color:white;
+        }
+
+
+    </style>
+
+</body>
+</html>
